@@ -63,6 +63,33 @@ blockquote {
     border-radius: 5px;
 }
 
+.container {
+    text-align: center; /* Menyelaraskan semua konten dalam container ke tengah */
+}
+
+button {
+    background-color: #6c63ff; /* Warna ungu */
+    color: white; /* Warna teks */
+    padding: 12px 24px; /* Jarak dalam */
+    border: none; /* Hilangkan border */
+    border-radius: 8px; /* Membuat sudut membulat */
+    font-size: 16px; /* Ukuran font */
+    cursor: pointer; /* Ubah kursor saat di-hover */
+    transition: background-color 0.3s ease; /* Animasi transisi */
+    margin-top: 20px; /* Jarak atas tombol */
+    display: inline-block; /* Membuat tombol mengikuti format text-align */
+}
+
+button:hover {
+    background-color: #5145d6; /* Warna ungu yang lebih gelap saat di-hover */
+}
+
+button:active {
+    background-color: #4038b4; /* Warna yang lebih gelap saat diklik */
+}
+
+
+
 /* Table styles */
 table {
     width: 100%;
@@ -120,4 +147,20 @@ footer {
     height: 228px;
     width: 600px;
     margin: 20px auto;
+}
+/* Gaya untuk pesan sambutan */
+.welcome-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 40px;
+    font-size: 24px; /* Menambah ukuran font */
+    font-weight: bold; /* Membuat teks lebih tebal */
+    border-radius: 10px;
+    display: none; /* Awalnya tersembunyi */
+    z-index: 1000;
+    text-align: center; /* Menjadikan teks di tengah */
 }
