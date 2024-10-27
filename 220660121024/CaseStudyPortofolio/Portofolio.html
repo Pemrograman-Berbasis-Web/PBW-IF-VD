@@ -4,20 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Pribadi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        .quote-container {
+            display: flex; /* Menggunakan flexbox untuk tampilan bersampingan */
+            align-items: center; /* Menyelaraskan item secara vertikal */
+            margin-top: 20px; /* Jarak atas untuk container */
+        }
+        .quote-container img {
+            width: 100px; /* Lebar gambar */
+            height: 200px; /* Tinggi gambar */
+            border-radius: 0%; /* Menyimpan bentuk persegi */
+            margin-right: 20px; /* Jarak antara gambar dan kutipan */
+        }
+        blockquote {
+            font-style: italic; /* Gaya italic untuk kutipan */
+            color: #34495E; /* Warna kutipan */
+            border-left: 2px solid #2E86C1; /* Border kiri untuk kutipan */
+            padding-left: 10px; /* Padding kiri untuk kutipan */
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Heading -->
     <h1 style="color: #2E86C1; font-size: 36px;">Portofolio Pribadi</h1>
     <h2 style="color: #34495E;">Tentang Saya</h2>
-    <p>Halo, nama saya <strong>Anjelina Mentari Rustandi</strong>, seorang <em>Mahasiswa</em> di Fakultas teknologi Informasi Universitas Sebelas April Program Studi Informatika .</p>
+    <p>Halo, nama saya <strong>Anjelina Mentari Rustandi</strong>, seorang <em>Mahasiswa</em> di Fakultas Teknologi Informasi Universitas Sebelas April Program Studi Informatika.</p>
 
-    <!-- Image -->
-    <img src="anjel.JPG" alt="Foto Profil" width="200" height="200" style="border-radius: 50%;">
-
-    <!-- Quoting -->
-    <h2>Kutipan</h2>
-    <blockquote>"Jangan pernah takut untuk mencoba hal baru. Setiap langkah maju, sekecil apapun, akan membawamu lebih dekat pada impianmu."</blockquote>
+    <!-- Gambar dan Kutipan Bersampingan -->
+    <div class="quote-container">
+        <img src="anjel.JPG" alt="Foto Profil">
+        <blockquote>"Jangan pernah takut untuk mencoba hal baru. Setiap langkah maju, sekecil apapun, akan membawamu lebih dekat pada impianmu."</blockquote>
+    </div>
 
     <!-- Link -->
     <h2>Hubungi Saya</h2>
@@ -25,7 +48,6 @@
     <ul>
         <li><a href="https://www.instagram.com/anjelinamr_?igsh=eWZ6dG51bWNocjN1">Instagram</a></li>
     </ul>
-
     <!-- Table -->
     <h2>Pengalaman Organisasi</h2>
     <table border="1" cellpadding="10">
@@ -99,7 +121,7 @@ body {
 .container {
     max-width: 800px;
     margin: auto;
-    background: white;
+    background: rgb(184, 101, 101);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -153,11 +175,11 @@ table {
 th, td {
     padding: 10px;
     text-align: left;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(145, 47, 47);
 }
 th {
-    background-color: #fdfdfd;
-    color: white;
+    background-color: #d64545;
+    color: rgb(248, 156, 156);
 }
 
 /* List styles */
@@ -226,7 +248,7 @@ footer {
        };
                 // Menampilkan pesan sambutan
     function showWelcomeMessage() {
-        alert("Selamat datang di portofolio saya! Saya adalah seorang mahasiswa Fakultas Teknologi Informasi Universitas sebelas April.");
+        alert("Hallo Selamat Membaca Portofolio Saya, Saya adalah seorang mahasiswa Fakultas Teknologi Informasi Universitas sebelas April.");
     }
 
     window.onload = function() {
@@ -238,3 +260,4 @@ footer {
             </script>
     </head>
 </html>
+
