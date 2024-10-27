@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Pribadi</title>
+</head>
+<body>
+
+    <!-- Heading -->
+    <h1 style="color: #2E86C1; font-size: 36px;">Portofolio Pribadi</h1>
+    <h2 style="color: #34495E;">Tentang Saya</h2>
+    <p>Halo, nama saya <strong>Anjelina Mentari Rustandi</strong>, seorang <em>Mahasiswa</em> di Fakultas teknologi Informasi Universitas Sebelas April Program Studi Informatika .</p>
+
+    <!-- Image -->
+    <img src="anjel.JPG" alt="Foto Profil" width="200" height="200" style="border-radius: 50%;">
+
+    <!-- Quoting -->
+    <h2>Kutipan</h2>
+    <blockquote>"Jangan pernah takut untuk mencoba hal baru. Setiap langkah maju, sekecil apapun, akan membawamu lebih dekat pada impianmu."</blockquote>
+
+    <!-- Link -->
+    <h2>Hubungi Saya</h2>
+    <p>Anda bisa menghubungi saya melalui media sosial berikut:</p>
+    <ul>
+        <li><a href="https://www.instagram.com/anjelinamr_?igsh=eWZ6dG51bWNocjN1">Instagram</a></li>
+    </ul>
+
+    <!-- Table -->
+    <h2>Pengalaman Organisasi</h2>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Nama Organisasi</th>
+            <th>Jabatan</th>
+            <th>Tahun</th>
+        </tr>
+        <tr>
+            <td>Dyaksa Jagat</td>
+            <td>Bendahara Umum</td>
+            <td>2023 - 2024</td>
+        </tr>
+        <tr>
+            <td>Dyaksa Jagat</td>
+            <td>Ketua Umum</td>
+            <td>2024 - Sekarang</td>
+        </tr>
+    </table>
+
+    <!-- List -->
+    <h2>Hobi Saya</h2>
+    <ul>
+        <li>Menggambar</li>
+        <li>Bernyanyi</li>
+        <li>Membaca</li>
+    </ul>
+    <ol>
+        <li>Camping</li>
+        <li>Memasak</li>
+        <li>Tidur</li>
+    </ol>
+
+    <!-- Audio -->
+    <h2>Lagu Favorit</h2>
+    <audio controls>
+        <source src="audio.mpeg" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+
+    <!-- Video -->
+    <h2>Karya video</h2>
+    <iframe width="560" height="315" src="Video.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <!-- Comment -->
+    <!-- Halaman ini dibuat untuk tugas HTML Pemograman Berbasis Web -->
+
+</body>
+</html>
+
+<html>
+    <head>
+        <style>
+            /* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaeaea;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Container for layout */
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Text center class */
+.text-center {
+    text-align: center;
+}
+
+/* Main title */
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Profile image styles */
+img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #000000;
+}
+
+/* Section headings */
+h2 {
+    color: #2980b9;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 5px;
+}
+
+/* Blockquote styles */
+blockquote {
+    font-style: italic;
+    margin: 10px 0 20px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-left: 5px solid #2980b9;
+    border-radius: 5px;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+th {
+    background-color: #fdfdfd;
+    color: white;
+}
+
+/* List styles */
+ul, ol {
+    margin: 10px 0 20px 20px; /* Indent lists */
+}
+
+/* Audio player styles */
+audio {
+    display: block;
+    margin: 20px auto; /* Center audio player */
+}
+
+/* Video iframe styles */
+iframe {
+    display: block;
+    margin: 20px auto; /* Center video */
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+/* Link styles */
+a {
+    color: #000102;
+    text-decoration: none; /* Remove underline */
+}
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Footer section */
+footer {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Embed audio styles */
+.audio-embed {
+    height: 228px;
+    width: 600px;
+    margin: 20px auto;
+}
+        </style>
+    </head>
+</html>
+
+<html>
+    <head>
+            <script>
+                // Fungsi untuk menghasilkan warna acak
+       function generateRandomColor() {
+           var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+           return randomColor;
+       }
+
+       // Mengubah warna latar belakang halaman secara acak
+       function changeBackgroundColor() {
+           document.body.style.backgroundColor = generateRandomColor();
+       }
+
+       // Memanggil fungsi changeBackgroundColor saat halaman dimuat ulang
+       window.onload = function() {
+           changeBackgroundColor();
+       };
+                // Menampilkan pesan sambutan
+    function showWelcomeMessage() {
+        alert("Selamat datang di portofolio saya! Saya adalah seorang mahasiswa Fakultas Teknologi Informasi Universitas sebelas April.");
+    }
+
+    window.onload = function() {
+        changeBackgroundColor();
+        showWelcomeMessage(); // Panggil fungsi pesan sambutan
+        displayProjects();
+        displayExperience();
+    };
+            </script>
+    </head>
+</html>
