@@ -13,3 +13,15 @@ function changeBackgroundColor() {
 window.onload = function() {
     changeBackgroundColor();
 };
+
+// Menampilkan pesan sambutan
+function showWelcomeMessage() {
+    alert("WELLCOME TO MY PORTFOLIO");
+}
+
+window.onload = function() {
+    changeBackgroundColor();
+    showWelcomeMessage(); // Panggil fungsi pesan sambutan
+    displayProjects();
+    displayExperience();
+};
