@@ -124,6 +124,10 @@ body {
   background: var(--smoky-black);
 }
 
+.nama {
+  color: white;
+  font-size: 20px;
+}
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
@@ -762,7 +766,7 @@ main {
 }
 
 .clients-item img:hover {
-  filter: grayscale(0);
+  filter: (0);
 }
 
 /*-----------------------------------*\
