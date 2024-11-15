@@ -1,8 +1,8 @@
 # UTS PEMROGRAMAN BERBASIS WEB
 
-**Nama Legkap**: Muhammad Ghianza Al Ghifari
-**Nim**: 220660121058
-**Kelas**: IF-VD
+**Nama Legkap**: Muhammad Ghianza Al Ghifari <br>
+**Nim**: 220660121058 <br>
+**Kelas**: IF-VD <br>
 **Dosen Pengampu**: Yanyan Sofiyan, S.Kom., M.Kom.
 
 # PENJELASAN Todo List
