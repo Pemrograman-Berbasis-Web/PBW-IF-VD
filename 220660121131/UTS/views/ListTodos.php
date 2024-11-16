@@ -9,6 +9,11 @@
 
 <style>
 <?php include "assets/css/style.css"?>
+body{
+    background-image: url("./././img/ferd.jpg");
+    background-color: transparent black;
+    background-size: cover;
+}
 </style>
 
 <script>

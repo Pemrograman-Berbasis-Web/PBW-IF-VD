@@ -1,7 +1,7 @@
 /* Gaya dasar untuk seluruh halaman */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #7207ec, #f40a6b);
+    background-image: url("./././img/ped.jpg");
     color: #333;
     display: flex;
     flex-direction: column;
@@ -32,7 +32,7 @@ ul li {
     color: #fff;
     border:2px solid #fff;
     background-color:transparent #fff;
-    filter:blur(4);
+    filter: blur(50%);
     margin: 10px 0;
     padding: 15px;
     border-radius: 8px;
