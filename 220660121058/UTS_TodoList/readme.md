@@ -12,7 +12,7 @@ Sebuah Aplikasi **Todo List** berbasis web yang sederhana untuk membantu penggun
 
 ## Screenshots
 
-![Screenshot](TodoList_db/images/Screenshot.png)
+![Screenshot](TodoList_db/image/Screenshot.png)
 
 
 ## Fitur
