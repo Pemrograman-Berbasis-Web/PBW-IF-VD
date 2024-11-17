@@ -10,7 +10,7 @@
 Sebuah Aplikasi **Todo List** berbasis web yang sederhana untuk membantu pengguna mengelola tugas mereka dengan mudah. Aplikasi ini memiliki fitur seperti menambah, menampilkan, pencarian, filter, menandai tugas selesai, dan menghapus tugas.
 
 
-## Screenshots
+## Tampilan Todo List
 
 ![Screenshot](TodoList_db/image/Screenshot.png)
 
@@ -64,9 +64,9 @@ Proyek ini terdiri dari beberapa file:
 - Implementasi autentikasi pengguna untuk pengelolaan tugas yang lebih personal.
 - Peningkatan antarmuka dengan animasi dan tema tambahan.
 
-## Penulis
+## Pembuat
 
-Dibuat oleh [Muhammad_Ghianza_Al_Ghifari]. Jangan ragu untuk menghubungi saya jika memiliki saran atau masukan untuk pengembangan aplikasi ini.
+Dibuat oleh Muhammad Ghianza Al Ghifari. Jangan ragu untuk menghubungi saya jika memiliki saran atau masukan untuk pengembangan aplikasi ini.
 
 ---
 
