@@ -1,102 +1,93 @@
 <?php
 // models/TodoModel.php
-class TodoModel {
-    private $todos = [];
 
+require_once 'core/Database.php';
+
+class TodoModel {
+    private $conn;
+    private $table_name = "todos";
+
+    /**
+     * Konstruktor untuk kelas
+     * 
+     * Metode ini akan membuat objek koneksi PDO ke database
+     * yang akan digunakan untuk operasi CRUD
+     */
     public function __construct() {
-        // Mock data for demonstration purposes
-        $this->todos = [
-            ['id' => 1, 'task' => 'Buy groceries', 'priority' => 'high', 'status' => 'pending', 'created_at' => '2024-11-01 12:00:00'],
-            ['id' => 2, 'task' => 'Finish homework', 'priority' => 'medium', 'status' => 'pending', 'created_at' => '2024-11-02 14:00:00'],
-        ];
+        $database = new Database();
+        $this->conn = $database->getConnection();
     }
 
     /**
-     * Mengambil semua todo
-     * @return array
+     * Mendapatkan semua todo yang ada di database
+     * 
+     * Metode ini akan melakukan query ke database untuk mendapatkan
+     * semua todo yang ada di database. Hasilnya akan diurutkan
+     * berdasarkan tanggal pembuatan descending.
+     * 
+     * @return array Sebuah array yang berisi semua todo yang ada di database
      */
     public function getAllTodos() {
-        return $this->todos;
+        $query = "SELECT * FROM " . $this->table_name . " ORDER BY created_at DESC";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     /**
      * Membuat todo baru
+     * 
+     * Metode ini akan membuat todo baru dengan teks yang diberikan
+     * dan menyimpannya di database. Jika berhasil maka metode ini
+     * akan mengembalikan nilai true, jika gagal maka metode ini akan
+     * mengembalikan nilai false.
+     * 
      * @param string $task Teks dari tugas
-     * @param string $priority Prioritas tugas
-     * @param string $created_at Waktu pembuatan tugas
-     * @return array Todo yang baru dibuat
+     * @return boolean
      */
-    public function createTodo($task, $priority, $created_at) {
-        $id = count($this->todos) + 1;
-        $todo = [
-            'id' => $id,
-            'task' => $task,
-            'priority' => $priority,
-            'status' => 'pending',
-            'created_at' => $created_at
-        ];
-        $this->todos[] = $todo;
-        return $todo;
+    public function createTodo($task) {
+        $query = "INSERT INTO " . $this->table_name . " (task) VALUES (:task)";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(":task", $task);
+        return $stmt->execute();
     }
 
     /**
      * Memperbarui status todo
-     * @param int $id ID todo yang akan diperbarui
-     * @param string $status Status baru (completed, in-progress, etc.)
-     * @return array Todo yang diperbarui
+     * 
+     * Metode ini akan memperbarui status todo dengan id yang diberikan
+     * dan status yang diberikan. Jika berhasil maka metode ini
+     * akan mengembalikan nilai true, jika gagal maka metode ini akan
+     * mengembalikan nilai false.
+     * 
+     * @param int $id ID dari todo yang akan diperbarui statusnya
+     * @param int $is_completed Status yang akan diperbarui
+     * @return boolean
      */
-    public function updateTodoStatus($id, $status) {
-        foreach ($this->todos as &$todo) {
-            if ($todo['id'] == $id) {
-                $todo['status'] = $status;
-                return $todo;
-            }
-        }
-        return null;
+    public function updateTodoStatus($id, $is_completed) {
+        $query = "UPDATE " . $this->table_name . " SET is_completed = :is_completed WHERE id = :id";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(":is_completed", $is_completed);
+        $stmt->bindParam(":id", $id);
+        return $stmt->execute();
     }
 
     /**
      * Menghapus todo
-     * @param int $id ID todo yang akan dihapus
-     * @return array Todo yang dihapus
+     * 
+     * Metode ini akan menghapus todo dengan id yang diberikan
+     * dari database. Jika berhasil maka metode ini
+     * akan mengembalikan nilai true, jika gagal maka metode ini akan
+     * mengembalikan nilai false.
+     * 
+     * @param int $id ID dari todo yang akan dihapus
+     * @return boolean
      */
     public function deleteTodo($id) {
-        foreach ($this->todos as $key => $todo) {
-            if ($todo['id'] == $id) {
-                unset($this->todos[$key]);
-                return $todo;
-            }
-        }
-        return null;
-    }
-
-    /**
-     * Memperbarui teks todo
-     * @param int $id ID todo yang akan diperbarui
-     * @param string $task Teks baru untuk tugas
-     * @return array Todo yang diperbarui
-     */
-    public function updateTodoText($id, $task) {
-        foreach ($this->todos as &$todo) {
-            if ($todo['id'] == $id) {
-                $todo['task'] = $task;
-                return $todo;
-            }
-        }
-        return null;
-    }
-
-    /**
-     * Mengambil todo berdasarkan ID
-     * @param int $id ID todo
-     * @return array Todo yang ditemukan
-     */
-    public function getTodoById($id) {
-        foreach ($this->todos as $todo) {
-            if ($todo['id'] == $id) {
-                return $todo;
-            }
-        }
-        return null;
+        $query = "DELETE FROM " . $this->table_name . " WHERE id = :id";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(":id", $id);
+        return $stmt->execute();
     }
 }
+?>

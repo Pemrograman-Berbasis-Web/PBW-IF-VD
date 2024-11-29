@@ -1,51 +1,60 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const taskInput = document.getElementById('task');
-    const addButton = document.getElementById('addBtn');
+    const taskInput = document.getElementById('taskInput');
+    const addTaskBtn = document.getElementById('addTaskBtn');
     const todoList = document.getElementById('todoList');
-    const clearButton = document.getElementById('clearBtn');
+    const clearAllBtn = document.getElementById('clearAllBtn');
 
-    // Fungsi untuk menambahkan tugas
-    function addTodo(task) {
-        const li = document.createElement('li');
-        li.textContent = task;
-
-        // Buat tombol hapus
-        const deleteBtn = document.createElement('button');
-        deleteBtn.textContent = 'Delete';
-        deleteBtn.classList.add('delete-btn');
-        
-        // Event listener untuk menghapus tugas
-        deleteBtn.addEventListener('click', () => {
-            li.remove(); // Menghapus elemen li secara langsung
-        });
-
-        // Tambahkan tombol hapus ke dalam elemen li
-        li.appendChild(deleteBtn);
-        todoList.appendChild(li);
-    }
-
-    // Menambahkan tugas dengan tombol 'Add'
-    addButton.addEventListener('click', () => {
-        const task = taskInput.value.trim();
-        if (task) {
-            addTodo(task);
-            taskInput.value = ''; // Bersihkan input setelah menambah tugas
+    // Add a new task
+    addTaskBtn.addEventListener('click', () => {
+        const taskText = taskInput.value.trim();
+        if (taskText) {
+            addTodoItem(taskText);
+            taskInput.value = ''; // Clear input field
         }
     });
 
-    // Menambahkan tugas dengan menekan tombol 'Enter'
+    // Add task by pressing Enter
     taskInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
-            const task = taskInput.value.trim();
-            if (task) {
-                addTodo(task);
-                taskInput.value = ''; // Bersihkan input setelah menambah tugas
+            const taskText = taskInput.value.trim();
+            if (taskText) {
+                addTodoItem(taskText);
+                taskInput.value = ''; // Clear input field
             }
         }
     });
 
-    // Menghapus semua tugas
-    clearButton.addEventListener('click', () => {
-        todoList.innerHTML = ''; // Menghapus semua tugas dalam daftar
+    // Add a new todo item to the list
+    function addTodoItem(task) {
+        const li = document.createElement('li');
+        li.textContent = task;
+
+        // Create the 'Mark as Completed' button
+        const completeBtn = document.createElement('button');
+        completeBtn.textContent = '✔';
+        completeBtn.classList.add('complete-btn');
+        completeBtn.addEventListener('click', () => {
+            li.classList.toggle('completed');
+        });
+
+        // Create the 'Delete' button
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent = 'Delete';
+        deleteBtn.classList.add('delete-btn');
+        deleteBtn.addEventListener('click', () => {
+            todoList.removeChild(li);
+        });
+
+        // Append buttons to the list item
+        li.appendChild(completeBtn);
+        li.appendChild(deleteBtn);
+
+        // Append the new todo item to the list
+        todoList.appendChild(li);
+    }
+
+    // Clear all tasks
+    clearAllBtn.addEventListener('click', () => {
+        todoList.innerHTML = ''; // Remove all todo items
     });
 });
