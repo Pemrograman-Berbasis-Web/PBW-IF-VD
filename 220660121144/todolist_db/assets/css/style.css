@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Daftar tugas */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+/* Teks Tugas */
+.task-text {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Form edit tugas */
+form {
+    display: inline;
+    margin-left: 30px;
+}
+
+.edit-input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 60%;
+    margin-right: 5px;
+    max-width: 150px;
+}
+
+/* Tombol */
+button {
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.complete-button:hover {
+    background-color: #45a049;
+}
+
+.update-button{
+    background-color: #bdb216;
+}
+
+.update-button:hover {
+    background-color: #a59c16;
+}
+.update-button, .complete-button, .delete-button {
+    margin-left: 2px;
+}
+
+.delete-button {
+    background-color: #c53636;
+}
+
+.delete-button:hover {
+    background-color: #de2b2b;
+}
+
+.complete-button {
+    background-color: #4CAF50;
+}
+
+.submit-button {
+    background-color: #4CAF50;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+/* Tambah tugas */
+.add-task {
+    margin-top: 20px;
+    margin-left: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-task input[type="text"] {
+    width: 80%;
+}
+
+.add-task button {
+    width: 18%;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.completed span {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.task-input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
