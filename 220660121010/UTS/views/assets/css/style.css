@@ -1,0 +1,103 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Body styling */
+body {
+  background-color: #8888;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  padding: 20px;
+}
+
+/* Main heading */
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-align: center; /* Center align the title */
+}
+
+/* Todo list container */
+ul {
+  list-style: none;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 20px auto; /* Center list container */
+  padding: 0;
+  text-align: left; /* Ensure left alignment of list content */
+}
+
+li {
+  background-color: #8888;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Task text */
+li span {
+  flex-grow: 1;
+}
+
+/* Link styling */
+a {
+  color: #3498db;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+a:hover {
+  color: #2980b9;
+}
+
+/* Completed task styling */
+li.completed {
+  background-color: #616261;
+  color: #155724;
+  text-decoration: line-through;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto; /* Center form on the page */
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
