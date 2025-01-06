@@ -1,4 +1,3 @@
-
 <?php
 // controllers/TodoController.php
 // Memanggil file TodoModel.php untuk menggunakan class TodoModel

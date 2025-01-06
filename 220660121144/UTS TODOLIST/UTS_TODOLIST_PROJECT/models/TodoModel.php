@@ -47,10 +47,20 @@ class TodoModel {
      * @return boolean
      */
     public function createTodo($task) {
-        $query = "INSERT INTO " . $this->table_name . " (task) VALUES (:task)";
-        $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(":task", $task);
-        return $stmt->execute();
+        try {
+            $query = "INSERT INTO " . $this->table_name . " (task, created_at) VALUES (:task, CURRENT_TIMESTAMP)";
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(":task", $task);
+            
+            if ($stmt->execute()) {
+                return true;
+            }
+            return false;
+        } catch (PDOException $e) {
+            // Jika ada error, log kesalahan atau tampilkan pesan error
+            echo "Error: " . $e->getMessage();
+            return false;
+        }
     }
 
     /**
@@ -66,11 +76,21 @@ class TodoModel {
      * @return boolean
      */
     public function updateTodoStatus($id, $is_completed) {
-        $query = "UPDATE " . $this->table_name . " SET is_completed = :is_completed WHERE id = :id";
-        $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(":is_completed", $is_completed);
-        $stmt->bindParam(":id", $id);
-        return $stmt->execute();
+        try {
+            $query = "UPDATE " . $this->table_name . " SET is_completed = :is_completed WHERE id = :id";
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(":is_completed", $is_completed);
+            $stmt->bindParam(":id", $id);
+
+            if ($stmt->execute()) {
+                return true;
+            }
+            return false;
+        } catch (PDOException $e) {
+            // Menangani kesalahan jika terjadi
+            echo "Error: " . $e->getMessage();
+            return false;
+        }
     }
 
     /**
@@ -85,10 +105,20 @@ class TodoModel {
      * @return boolean
      */
     public function deleteTodo($id) {
-        $query = "DELETE FROM " . $this->table_name . " WHERE id = :id";
-        $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(":id", $id);
-        return $stmt->execute();
+        try {
+            $query = "DELETE FROM " . $this->table_name . " WHERE id = :id";
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(":id", $id);
+
+            if ($stmt->execute()) {
+                return true;
+            }
+            return false;
+        } catch (PDOException $e) {
+            // Menangani kesalahan jika terjadi
+            echo "Error: " . $e->getMessage();
+            return false;
+        }
     }
 }
 ?>
