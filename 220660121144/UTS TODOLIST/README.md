@@ -1,88 +1,33 @@
-# UTS TO-DO LIST PORJECT
+HOLLA EVERYONE, I'M ABDAH SYAKIROH GUSTIAN!🙌🏻💡
 
-Hallo Perkenalkan saya **Reni Kartika Suwandi** NPM 220660121130
-Pada Tugas Ujian Tengah semester saya membuat aplikasi To-Do List
-untuk penjelasan lebih detail saya lampirkan dibawah.
+Aplikasi Dibangun Menggunakan
+1. HTML:
+Menyediakan elemen-elemen dasar aplikasi seperti input untuk menambahkan tugas baru, tombol untuk menghapus atau menandai tugas selesai, dan daftar untuk menampilkan tugas-tugas.
 
-## 1. Deskripsi Proyek
+2. CSS:
+Mengatur gaya tampilan aplikasi agar lebih menarik dan responsif. Memberikan gaya pada elemen HTML seperti tombol, daftar tugas, dan input untuk membuat aplikasi terlihat rapi.
 
-Aplikasi ini bertujuan untuk mempermudah pengguna dalam mengelola tugas-tugas mereka sehari-hari dengan menggunakan konsep OOP (Object-Oriented Programming) dan arsitektur MVC (Model-View-Controller), serta di tambahkan style menggunakan css dan meningkatkan fungsionalitas oleh JavaScript
+3. JavaScript:
+Menyediakan fungsi interaktif seperti menambah, menghapus, atau menandai tugas sebagai selesai tanpa perlu memuat ulang halaman. Menggunakan AJAX untuk mengirim data ke server (PHP) agar aplikasi lebih dinamis.
 
-## 2. Fitur Utama
+4. PHP:
+Mengelola logika backend, menerima data dari JavaScript, dan mengakses database MySQL. Memproses permintaan untuk menambah, menampilkan, mengubah, atau menghapus tugas dari database.
 
-- Tambah Tugas
-- Tambah Singkat Deskripsi Tugas
-- Tandai sebagai Selesai
-- Hapus Tugas
-- Daftar Tugas
-- Deadline
+5. MySQL:
+Menyimpan data tugas seperti ID, judul, status, dan tanggal. Berinteraksi dengan PHP untuk menyimpan dan mengambil daftar tugas dari database.
 
-## 3. Teknologi yang Digunakan
+📌 Fitur Utama
 
-1. PHP: PHP digunakan untuk menangani logika aplikasi di sisi server, seperti memproses permintaan HTTP, berinteraksi dengan database, dan mengirimkan respons ke klien.
+- Menambahkan Tugas Baru: Dengan mudah menambahkan tugas baru dalam sekejap.
+- Menandai Tugas Selesai: Lacak tugas yang sudah selesai.
+- Menghapus Tugas: Hapus tugas yang sudah tidak diperlukan lagi.
+- Desain Responsif: Aplikasi ini dapat diakses dengan baik di desktop maupun perangkat mobile.
 
-2. MySQL: MySQL digunakan sebagai sistem manajemen basis data untuk menyimpan, mengelola, dan mengambil data tugas dalam aplikasi.
+---
 
-3. PDO (PHP Data Objects): PDO adalah ekstensi PHP yang menyediakan antarmuka yang aman dan fleksibel untuk berinteraksi dengan berbagai sistem manajemen database, termasuk MySQL.
+🚀 Teknologi yang Digunakan
 
-4. OOP (Object-Oriented Programming): OOP adalah paradigma pemrograman yang memungkinkan pengorganisasian kode melalui objek dan kelas, yang membuat pengelolaan, pemeliharaan, dan pengembangan aplikasi menjadi lebih mudah dan terstruktur.
-
-5. MVC (Model-View-Controller): MVC adalah pola desain perangkat lunak yang memisahkan aplikasi menjadi tiga komponen utama: Model (data dan logika bisnis), View (antarmuka pengguna), dan Controller (pengontrol alur aplikasi dan interaksi antar komponen)
-
-6. JavaScript : JavaScript digunakan untuk meningkatkan interaktivitas dan fungsionalitas aplikasi, seperti menangani input pengguna secara dinamis, serta menggunakan local storage untuk menyimpan data sementara sebelum disinkronkan dengan database, sehingga mengurangi kemungkinan kehilangan data.
-
-7. CSS: CSS digunakan untuk mengatur desain dan tata letak aplikasi, memastikan tampilan yang responsif dan menarik dengan penataan elemen-elemen visual seperti warna, ukuran, dan posisi
-
-## Adapun Untuk Mekanisme dari aplikasi To-Do List nya
-
-## 1. Tampilan Awal Aplikasi To-Do List
-
-![Tampilan Awal](https://github.com/Reswn/Image-Project-PBW/blob/main/Screenshot_8-11-2024_94048_localhost.jpeg?raw=true)
-
-Ini adalah tampilan awal dari aplikasi terdapat applikasi yang di wrapping dengan kontainer, didalamnya ada kontainer utama terdapat indikator angka untuk menghitung banyaknya tugas dan banyaknya yang diselesaikan, persentasi bar untuk meninjau berapa progress pengerjaan.
-
-kontainer task form berisi, form untuk input tugas, input deskripsi singkat, dan deadline tugas
-
-## 2. Tampilan Pada saat ditambahkan Tugas
-
-![Tampilan Tugas](https://github.com/Reswn/Image-Project-PBW/blob/main/Screenshot_8-11-2024_95552_localhost.jpeg?raw=true)
-
-Pada saat tugas diinput, list akan melakukan stack ke bawah task form supaya lebih rapih, pada kolom task terdapat fitur Edit, tandai Selesai, Dan Hapus.
-
-pada circle untuk tugas juga bertambah menunjukan adanya tugas yang ditambahkan
-
-## 3. Tampilan Pada saat Tugas ditandai Selesai
-
-![Tampilan Selesai](https://github.com/Reswn/Image-Project-PBW/blob/main/Screenshot_8-11-2024_95614_localhost.jpeg?raw=true)
-
-Saat Tugas ditandai selesai, akan ada respon dimana tugas, deskripsi, dan deadline dicoret, selain itu percentage bars untuk progress ada perubahan, serta circle tugas jug merespon dengan menunjukan ada tugas yang sudah ditandai selesai.
-
-## 4. Tampilan Pada saat Tugas diedit
-
-![Tampilan Edit](https://github.com/Reswn/Image-Project-PBW/blob/main/Screenshot_8-11-2024_95634_localhost.jpeg?raw=true)
-
-Pada saat ingin mengedit Tugas, judul tugas, deskripsi, dan deadline. Inputan tersebut akan kembali masuk ke TaskForm supaya bisa di edit, dan stack nya akan hilang.
-
-## 5. Tampilan Pada saat Tugas diedit
-
-![Tampilan selesai Edit](https://github.com/Reswn/Image-Project-PBW/blob/main/Screenshot_8-11-2024_95651_localhost.jpeg?raw=true)
-
-Apabila sudah di edit Tugas Akan kembali pada stack sebelumnya
-
-## 6. Tugas Sama ditambahkan
-
-![Tampilan selesai Edit](https://github.com/Reswn/Image-Project-PBW/blob/main/To-do%20List%20and%206%20more%20pages%20-%20Personal%20-%20Microsoft%E2%80%8B%20Edge%2008_11_2024%2010_00_23.png?raw=true)
-
-Jika kita menambahkan tugas dengan Judul, Deskripsi dan Deadline sama akan muncul alert yang memberitahukan kalau tugas sudah ada
-
-## 7. Tugas Dihapus
-
-![Tampilan Tugas selesai ](https://github.com/Reswn/Image-Project-PBW/blob/main/Screenshot_8-11-2024_1013_localhost.jpeg?raw=true)
-
-Saat tugas sudah selesai semua, kita bisa menghapusnya satu per-satu
-
-## 8. Tugas Selesai
-
-![Tampilan akhir](https://github.com/Reswn/Image-Project-PBW/blob/main/Screenshot_8-11-2024_94048_localhost.jpeg?raw=true)
-
-Saat Tugas Sudah dihapus tampilan akan seperti semula.
+- HTML5: Untuk membuat struktur konten yang rapi.
+- CSS3: Untuk mendesain aplikasi agar tampak menarik dan estetis.
+- JavaScript: Untuk memberikan interaktivitas pada aplikasi, seperti menambahkan dan menghapus tugas.
+- Local Storage: Menyimpan tugas secara lokal di perangkat pengguna.
