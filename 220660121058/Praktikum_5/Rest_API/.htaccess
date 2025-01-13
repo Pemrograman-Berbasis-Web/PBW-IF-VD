@@ -13,4 +13,4 @@ RewriteRule ^(.*)$ index.php [L]
 </IfModule>
 
 # Mengatur akses ke api.php
-RewriteRule ^api/(.*) api.php [QSA,L]
+RewriteRule ^api/(.*)$ api.php [QSA,L]
