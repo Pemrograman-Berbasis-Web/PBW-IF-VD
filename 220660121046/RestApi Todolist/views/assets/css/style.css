@@ -1,0 +1,83 @@
+/* Mengatur gaya untuk seluruh halaman */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Judul halaman */
+h1 {
+    text-align: center;
+    color: #444;
+}
+
+/* Gaya untuk daftar todo */
+#todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+/* Gaya untuk setiap item dalam daftar todo */
+#todo-list li {
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Gaya untuk tombol aksi */
+#todo-list li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 0.9em;
+    margin-left: 10px;
+}
+
+#todo-list li a:hover {
+    color: #0056b3;
+}
+
+/* Gaya untuk todo yang selesai */
+#todo-list li.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* Gaya untuk formulir input */
+#add-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Input teks */
+#add-form input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+/* Tombol tambah */
+#add-form button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+#add-form button:hover {
+    background-color: #0056b3;
+}
