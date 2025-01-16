@@ -6,9 +6,10 @@
 
 <h1 align="Center">
     <img src="https://readme-typing-svg.herokuapp.com?font=Times+New+Roman&pause=1000&color=24F700&center=true&vCenter=true&width=435&lines=Hai+%F0%9F%91%8B+Saya+Muhammad+Ghianza+Al+Ghifari!" alt="Typing SVG" /></a>
+    <p align="center">
     <img src="https://user-images.githubusercontent.com/74038190/225813708-98b745f2-7d22-48cf-9150-083f1b00d6c9.gif" alt="Coder Logo" width="400">
-
 </h1>
+
 <h1 align="center"><a>Mata Kuliah
 <br>Pemrograman Berbasis Web</a></br></h1>
 
