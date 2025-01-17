@@ -43,4 +43,4 @@ switch ($action) {
 $todos = $controller->index();
 
 // Merender tampilan
-require 'views/listTodos.php';
+require 'listTodos.php';
