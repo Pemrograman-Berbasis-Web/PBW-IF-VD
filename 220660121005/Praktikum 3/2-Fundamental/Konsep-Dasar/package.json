@@ -1,0 +1,12 @@
+{
+  "name": "konsep-dasar",
+  "version": "1.0.0",
+  "description": "Bacalah secara runut bab Konsep Dasar ini, fahami dan bersabarlah karena ilmu atau pengetahuan tidak bisa didapatkan kecuali dengan _kesabaran_.",
+  "main": "node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
